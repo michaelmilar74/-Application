@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://127.0.0.1:5500/index.html?firstName=&lastName=&email=&url=&tel= -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Elements</title>
+ <link rel="stylesheet" href="Style.css">
+<script>-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</head>
+<body>
+    <style>
+        h2 {
+            text-align: center;
+        
+        }   
+        
+   </style>
+    <h2>Application  For A Job</h2><br>
+    
+ <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="First Name">
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br>
+
+       <br> <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email">
+
+    
+        <label for="url">Website:</label>
+        <input type="url" id="url" name="url" placeholder="Website URL"><br>
+        <br>
+        <label for="tel">Phone:</label>
+        <input type="tel" id="tel" name="tel" placeholder="Phone Number">
+        <label for="age">Age:</label>
+        <input type="age" id="tel" name="age" placeholder="age"><br>
+        <br>
+        <label for="FisrtEmployer">First Employer</label>
+        <input type="text" id="FisrtEmployer" name="FisrtEmployer" placeholder="First Employer"><br>
+         <br>
+        <label for="Second Employer">Second Employer</label>
+        <input type="text" id="SEcond Employer" name="Second " placeholder="Second Employer"><br>
+        <br>
+      
+   
+        <label for="Third Employer">Third Employer</label>
+       <input type="text" id="Third Employer" name="Third Employer " placeholder="Third Employer"><br>
+    <br> 
+        <label for="Fourth Employer">Fourth Employer</label>
+        <input type="text" id="Fourth Employer" name="Fourth Employer" placeholder="Fourth Employer"><br>
+        <br>
+        <label for="Fifth Employer">Fourth Employer</label>
+        <input type="text" id="Fifth Employer" name="Fourth Employer" placeholder="Fourth Employer"><br>
+        <br>
+
+<label for="message">Message Box:</label><br>
+<textarea rows="10" cols="50" name="message"></textarea>
+        <input type="submit" value="Submit"><br>
+    </form>  
+
+
+</body></html>
